@@ -1,13 +1,12 @@
-require "./property-support"
 EventEmitter = require( "events" ).EventEmitter
 
 module.exports = class Queue extends EventEmitter
 
-  @property 'length',
+  Object.defineProperty @prototype, 'length',
     get : -> @queue.length - @offset
 
-  @property 'isEmpty',
-    get : -> @queue.length = 0
+  Object.defineProperty @prototype, 'isEmpty',
+    get : -> @queue.length == 0
 
   constructor : ->
     @queue = []

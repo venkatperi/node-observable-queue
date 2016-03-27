@@ -1,5 +1,10 @@
 fs = require 'fs'
 
+isModified = ( filepath ) ->
+  now = new Date()
+  modified = fs.statSync( filepath ).mtime
+  return (now - modified) < 10000
+
 module.exports = ( grunt ) ->
 
   grunt.initConfig
@@ -25,8 +30,8 @@ module.exports = ( grunt ) ->
         tasks : [ "coffee:dist" ]
         files : [ "lib/**/*coffee", "*.coffee" ]
 
-  for t in [ "execute", "contrib-watch", "contrib-coffee", "contrib-clean" ]
+  for t in [ "contrib-watch", "contrib-coffee", "contrib-clean" ]
     grunt.loadNpmTasks "grunt-#{t}"
 
-  grunt.registerTask "default", [ "clean:dist", "coffee:dist" ]
+  grunt.registerTask "default", ["clean:dist","coffee:dist"]
 

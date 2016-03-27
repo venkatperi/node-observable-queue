@@ -15,6 +15,7 @@ describe "Queue", ->
 
   describe "length", ->
     it "is empty to begin", ->
+      queue.isEmpty.should.equal true
       queue.length.should.equal 0
       
     it "enqueue increases the length", ->
@@ -23,6 +24,7 @@ describe "Queue", ->
       queue.enqueue obj3 
       queue.enqueue obj4 
       queue.length.should.equal 4
+      queue.isEmpty.should.equal false
 
     it "dequeue decreases the length", ->
       queue.enqueue obj1
@@ -32,6 +34,7 @@ describe "Queue", ->
       queue.dequeue()
       queue.dequeue()
       queue.length.should.equal 2
+      queue.isEmpty.should.equal false
 
     it "clear the queue", ->
       queue.clear()

@@ -1,6 +1,10 @@
 {
   "name": "node-observable-queue",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/venkatperi/node-observable-queue.git"
+  },
   "preferGlobal": false,
   "description": "Observable queue for nodejs",
   "dependencies": {
@@ -10,22 +14,17 @@
     "npm": ">= 1.0.0"
   },
   "bundleDependencies": [],
-  "main": "lib/Queue.coffee",
-  "devDependencies": {
-    "coffee-script": "^1.8.0",
-    "coffeeify": "~0.7.0",
-    "grunt": "^0.4.5",
-    "grunt-browserify": "^3.0.1",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-coffee": "^0.12.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-execute": "^0.2.2",
-    "mocha": "^2.0.1",
-    "should": "^4.4.1"
-  },
+  "main": "dist/Queue",
   "scripts": {
     "prepublish": "grunt",
     "test": "mocha"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-coffee": "^0.12.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "should": "^4.4.1"
   },
   "author": "Venkat Peri <venkatperi@gmail.com> (http://www.vperi.com/)",
   "license": "MIT"
