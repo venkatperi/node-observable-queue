@@ -14,7 +14,7 @@
     "npm": ">= 1.0.0"
   },
   "bundleDependencies": [],
-  "main": "dist/Queue",
+  "main": "dist/lib/Queue",
   "scripts": {
     "prepublish": "grunt",
     "test": "mocha"
