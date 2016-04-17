@@ -1,14 +1,13 @@
 {
   "name": "node-observable-queue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/venkatperi/node-observable-queue.git"
   },
   "preferGlobal": false,
   "description": "Observable queue for nodejs",
-  "dependencies": {
-  },
+  "dependencies": {},
   "engines": {
     "node": ">= 0.6.0",
     "npm": ">= 1.0.0"
